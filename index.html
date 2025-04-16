@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simon Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="high-score">High Score: <span id="highScore">0</span></div>
+
+  <div class="theme-switcher">
+    <div class="theme-btn classic" style="background: #2c3e50"></div>
+    <div class="theme-btn neon" style="background: #1a1a1a"></div>
+  </div>
+
+  <div class="game-container">
+    <div class="simon-button" data-color="0"></div>
+    <div class="simon-button" data-color="1"></div>
+    <div class="simon-button" data-color="2"></div>
+    <div class="simon-button" data-color="3"></div>
+  </div>
+
+  <div class="control-panel">
+    <div class="display" id="display">00</div>
+    <div class="progress-bar"><div class="progress"></div></div>
+    <button id="startBtn">▶ Start</button>
+    <button id="strictBtn">🔒 Strict: OFF</button>
+    <button id="muteBtn">🔊 Sound: ON</button>
+  </div>
+
+  <div class="game-over" id="gameOverScreen">
+    <p class="game-over-text">Game Over!</p>
+    <p class="score-display">Score: 0</p>
+    <button onclick="initGame()">🔄 Play Again</button>
+  </div>
+
+  <div class="instructions">
+    Repeat the sequence by pressing the colored buttons in the correct order!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
